@@ -6,7 +6,7 @@
 @import "base/base";
 @import "base/typography";
 @import "base/fonts";
-@import "base/normalize";
+//@import "base/normalize";
 
 @import "layout/navigation";
 @import "layout/header";
@@ -19,3 +19,23 @@
 @import "pages/home";
 
 @import "themes/default";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", serif;
+  font-weight: 400;
+  font-style: 16px;
+  line-height: 1.7;
+  columns: #777;
+}
+
+.header {
+  height: 95vh;
+  background-image: url(../img/hero.jpg);
+  background-size: cover;
+}
