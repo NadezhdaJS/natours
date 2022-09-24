@@ -4,6 +4,7 @@
 @import "abstracts/placeholders";
 
 @import "base/base";
+@import "icon-font";
 @import "base/typography";
 @import "base/fonts";
 @import "base/animations";
@@ -18,5 +19,6 @@
 
 @import "components/button";
 @import "components/composition";
+@import "components/feature-box";
 
 @import "pages/home";
