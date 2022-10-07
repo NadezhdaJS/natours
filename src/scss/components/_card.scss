@@ -15,7 +15,7 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden; //скрывает заднюю часть элемента
     border-radius: 3px;
-    overflow: hidden;
+    overflow: hidden; //скрывает у дочерних элементов переполнение. Здесь скрывает углы фото, которые вылезают за пределы карточки
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
 
     &--front {
@@ -65,7 +65,7 @@
   &__picture {
     background-size: cover;
     height: 23rem;
-    background-blend-mode: screen;
+    background-blend-mode: screen; //смешивает градиент и фото
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     border-top-left-radius: 3px;
@@ -114,7 +114,7 @@
   &__heading-span {
     padding: 1rem 1.5rem;
     -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
+    box-decoration-break: clone; //Каждый фрагмент оформляется независимо. Ко всем фрагментам отдельно применяется рамка, тень, фон и др.
 
     &--1 {
       background-image: linear-gradient(
