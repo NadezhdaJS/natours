@@ -1,4 +1,5 @@
 .btn {
+  &,
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -9,17 +10,24 @@
     transition: all 0.2s;
     position: relative;
     font-size: $default-font-size;
+    //Change for the <button> element
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
-    transform: translateY(-0.3rem);
+    transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
     &::after {
       transform: scaleX(1.4) scaleY(1.6);
       opacity: 0;
     }
   }
-  &:active {
+
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
@@ -27,10 +35,12 @@
   &--white {
     background-color: $color-white;
     color: $color-grey-dark;
+
     &::after {
       background-color: $color-white;
     }
   }
+
   &--green {
     background-color: $color-primary;
     color: $color-white;
@@ -39,8 +49,8 @@
       background-color: $color-primary;
     }
   }
+
   &::after {
-    //первое обязательно
     content: "";
     display: inline-block;
     height: 100%;
@@ -54,8 +64,7 @@
   }
 
   &--animated {
-    animation: moveInBottom 0.5s ease-out 0.75s; //animation-delay
-    //hides btn before animation
+    animation: moveInBottom 0.5s ease-out 0.75s;
     animation-fill-mode: backwards;
   }
 }
@@ -63,12 +72,12 @@
 .btn-text {
   &:link,
   &:visited {
+    font-size: $default-font-size;
     color: $color-primary;
     display: inline-block;
     text-decoration: none;
     border-bottom: 1px solid $color-primary;
     padding: 3px;
-    font-size: $default-font-size;
     transition: all 0.2s;
   }
 
@@ -78,6 +87,7 @@
     box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
     transform: translateY(-2px);
   }
+
   &:active {
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
     transform: translateY(0);
