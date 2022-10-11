@@ -188,6 +188,7 @@
   }
 
   //@include respond(tab-port) {
+  //hover:none указывает на устройства, на котором невозможно навести мышь на элементы, те на планшеты и телефоны
   @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     height: auto;
     border-radius: 3px;
